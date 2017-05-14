@@ -16,6 +16,12 @@ Tidbit Torrent is a BitTorrent Client built over 10 days in a team of four. It i
 - Node.js
 - Jasmine-node
 
+### Demo video ###
+
+Below is a demo of two users using our client to share and download a photo. The user on the left is seeding the file, and the user on the right downloads it. You can see messages in the command line that show the progress of the download, and then the image appearing in the Downloads folder of the user on the right.
+
+![demo](https://github.com/FloraHarvey/bittorrent-client/blob/master/tidbitDemoVideo.gif)  
+
 ### USER STORIES ###
 
 ```
@@ -41,6 +47,3 @@ I want to seed files
 We built the client using a modular structure - seperate components deal with connecting to the tracker, connecting to peers, building messages, parsing messages, parsing the .torrent file, etc. We used classes for those components that would need to hold state, such as the Pieces class, which gets a list of pieces from the .torrent file, and tracks those that have been requested and received. The Queue class queues up pieces in the order to be requested, and the Download class saves the Pieces, Queue, parsed .torrent file, and file to be written to as properties.
 
 This project challenged us to learn about an area that none of us had encountered before, and was a great opportunity to get to grips with networking, different ways of encoding data, and reading/writing files.
-
-
-
